@@ -1,0 +1,48 @@
+plugins {
+	alias libs.plugins.nebula.release
+}
+subprojects{
+	apply plugin: 'java'
+	apply plugin: 'maven-publish'
+
+	group = 'com.sefeb.mie'
+
+	publishing {
+		publications {
+			ilab(MavenPublication) {
+				from components.java
+			}
+		}
+
+//		repositories {
+//			maven {
+//				url = "http://centrual.maven.org/repository/nexus-releases/"
+//				allowInsecureProtocol = true
+//				credentials {
+//					username = repoUsername
+//					password = repoPassword
+//				}
+//			}
+//		}
+	}
+
+	dependencies {
+		testImplementation libs.junit.jupiter
+	}
+
+	test {
+		useJUnitPlatform()
+	}
+
+	java {
+		toolchain {
+			languageVersion = JavaLanguageVersion.of(17)
+		}
+	}
+
+	compileJava{
+		options.encoding("UTF-8")
+		sourceCompatibility("17")
+		targetCompatibility("17")
+	}
+}
