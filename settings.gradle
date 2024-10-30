@@ -10,8 +10,8 @@ plugins {
     id 'org.gradle.toolchains.foojay-resolver-convention' version '0.8.0'
 }
 
-rootProject.name = 'mie'
-include('mie-excel')
+rootProject.name = 'ecs'
+include('excel-ecs')
 
 dependencyResolutionManagement {
     repositories {

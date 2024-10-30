@@ -5,7 +5,7 @@ subprojects{
 	apply plugin: 'java'
 	apply plugin: 'maven-publish'
 
-	group = 'com.sefeb.mie'
+	group = 'com.sefeb.ecs'
 
 	publishing {
 		publications {
@@ -14,16 +14,6 @@ subprojects{
 			}
 		}
 
-//		repositories {
-//			maven {
-//				url = "http://centrual.maven.org/repository/nexus-releases/"
-//				allowInsecureProtocol = true
-//				credentials {
-//					username = repoUsername
-//					password = repoPassword
-//				}
-//			}
-//		}
 	}
 
 	dependencies {
